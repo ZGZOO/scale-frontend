@@ -23,7 +23,7 @@ Weight Tracker is an app that allows the user to input the weight for a certain 
 
 ## User Stories
 
-- Link to it
+- [See user stories](https://github.com/ZGZOO/weight-tracker/blob/master/planning/planning.md)
 
 ## Wireframes
 
