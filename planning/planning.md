@@ -51,6 +51,29 @@ Relationship:
 - User has many periods
 - Period has many weights
 
+## CRUD functionalities
+
+- Creat:
+  - account
+  - weight + date
+  - period
+- Read:
+  - weight + date
+  - line chart
+- Update:
+  - weight for the day
+  - period: start day, or end day
+  - (add a friend?)
+- Delete:
+  - weight for the day
+  - period
+  - account
+  - (a friend?)
+
+## External API
+
+- Google Calendar(?)
+
 ## Minimum Viable Product (MVP)
 
 - Fully functional application with all the user stories achieved
