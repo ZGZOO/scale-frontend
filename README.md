@@ -23,11 +23,11 @@ Scale is an app that allows the user to input the weight for a certain day, and 
 
 ## User Stories
 
-- [See user stories](https://github.com/ZGZOO/weight-tracker/blob/master/planning/planning.md)
+- [See user stories](https://github.com/ZGZOO/scale-frontend/blob/master/planning/planning.md)
 
 ## Wireframes
 
-- Link to it
+- [See wireframes](https://github.com/ZGZOO/scale-frontend/blob/master/planning/planning.md)
 
 ## Unsolved Problems
 
