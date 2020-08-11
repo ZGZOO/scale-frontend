@@ -21,7 +21,7 @@
 ## Wireframes
 
 1. [Phone design](https://res.cloudinary.com/headincloud/image/upload/v1597155769/scale-phone-size-design.png)
-2. Tablet design
+2. [Tablet design](https://res.cloudinary.com/headincloud/image/upload/v1597157409/Scale-Tablet-Design.png)
 3. Laptop design
 
 ## Minimum Viable Product (MVP)
