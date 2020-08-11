@@ -22,7 +22,7 @@
 
 1. [Phone design](https://res.cloudinary.com/headincloud/image/upload/v1597155769/scale-phone-size-design.png)
 2. [Tablet design](https://res.cloudinary.com/headincloud/image/upload/v1597157409/Scale-Tablet-Design.png)
-3. Laptop design
+3. [Laptop design](https://res.cloudinary.com/headincloud/image/upload/v1597158405/Scale-Laptop-Design.png)
 
 ## Minimum Viable Product (MVP)
 
