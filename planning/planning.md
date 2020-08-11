@@ -24,6 +24,33 @@
 2. [Tablet design](https://res.cloudinary.com/headincloud/image/upload/v1597157409/Scale-Tablet-Design.png)
 3. [Laptop design](https://res.cloudinary.com/headincloud/image/upload/v1597158405/Scale-Laptop-Design.png)
 
+## Components
+
+- [Components Diagram]()
+
+## Models
+
+User:
+
+- User name
+- Password
+
+Weight:
+
+- Weight
+- Date
+
+Period:
+
+- Start day
+- End day (optional)
+
+Relationship:
+
+- User has many weights
+- User has many periods
+- Period has many weights
+
 ## Minimum Viable Product (MVP)
 
 - Fully functional application with all the user stories achieved
@@ -67,6 +94,6 @@
 ## Questions
 
 - A user have many days/weights/periods?
-- How about the other way around?
 - Many to many model?
-- How can I just embed a calendar? Google Calendar?
+- NoSQL or SQL??
+- How can I embed a calendar? Google Calendar?
