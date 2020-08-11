@@ -32,8 +32,29 @@
 
 User:
 
-- User name
-- Password
+- username
+- password_digest
+
+scale_api > db > schema.rb
+
+```
+create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+```
+
+scale_api > app > models > user.rb:
+
+```
+class User < ApplicationRecord
+  has_secure_password
+end
+```
+
+---
 
 Weight:
 
@@ -92,8 +113,8 @@ Relationship:
 | ------------------------------------------- | -------------- | -------------------- | ----------------- | --------- | ------------ |
 | Mobile First                                | H              | 6                    | ??                | Day 1     | x            |
 | Backend                                     | H              | 6                    | ??                | Day 1     | x            |
-| Set up user model (username, password)      | H (hard, how?) | 6                    | ??                | Day 1     | x            |
-| User Authentication?                        | H (hard, how?) | 6                    | ??                | Day 1 - 2 | x            |
+| User Authentication (Backend - user model)  | H              | 6                    | 2.5               | Day 1     | o            |
+| User Authentication (Link to Frontend)      | H              | 6                    | ??                | Day 1     | x            |
 | Set up a calendar (date) (Google Calendar?) | H (hard, how?) | 6                    | ??                | Day 1 - 2 | x            |
 | Set up weight model (lb, kg)                | H (hard, how?) | 6                    | ??                | Day 1     | x            |
 | Set up period model (date and weight)       | H (hard, how?) | 6                    | ??                | Day 1     | x            |
