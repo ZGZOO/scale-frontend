@@ -1,4 +1,4 @@
 [build]
 base = "scale-client/"
 publish = "scale-client/build/"
-command = "yarn build"
+command = "npm run build"
