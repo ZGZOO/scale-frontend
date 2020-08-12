@@ -122,6 +122,7 @@ Relationship:
 | Create Nav Component                                     | H              | 15 mins              | 15 mins           | Day 1     | o            |
 | Create Login Component                                   | H              | 15 mins              | 15 mins           | Day 1     | o            |
 | Deploy (continuously) to Netlify                         | H              | 1/4                  | 3                 | Day 1 - 2 | o            |
+| Add SCSS                                                 | H              | 2 mins               | 2 mins            | Day 2     | o            |
 | Login Page + User Auth (frontend with form)              | H              | 6                    | ??                | Day 2     | x            |
 | Set up weight model (lb, kg)                             | H (hard, how?) | 6                    | ??                | Day 2     | x            |
 | Set up period model (date and weight)                    | H (hard, how?) | 6                    | ??                | Day 2     | x            |
