@@ -12,7 +12,6 @@ function Nav() {
           className="logo"
         />
       </NavLink>
-      <NavLink to="/login">Log In</NavLink>
     </nav>
   );
 }
