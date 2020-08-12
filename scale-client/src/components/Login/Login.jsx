@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    console.log("Login-useEffect: ", user);
+  }, [user]);
 
   const handleChange = (event) => {
     console.log("event", event.target.name, event.target.value);
@@ -18,12 +22,13 @@ function Login() {
     event.preventDefault();
     axios({
       url: `http://localhost:3000/users/login`,
-      method: "PUT",
+      method: "POST",
       data: loginInput,
     })
       .then((res) => {
+        console.log("handle submit - ", res.data);
         setUser(res.data);
-        console.log(user);
+        // console.log("handle submit print user - ", user);
         // props.history.push("/items");
       })
       .catch(console.error);
