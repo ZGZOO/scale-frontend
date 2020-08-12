@@ -1,4 +1,0 @@
-[build]
-base = "scale-client/"
-publish = "scale-client/build/"
-command = "npm run build"
