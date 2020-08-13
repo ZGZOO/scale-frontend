@@ -20,10 +20,20 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const data = {
+      user: {
+        username: loginInput.username,
+        password: loginInput.password,
+      },
+    };
+    console.log(JSON.stringify(data));
     axios({
       url: `http://localhost:3000/users/login`,
       method: "POST",
-      data: loginInput,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify(data),
     })
       .then((res) => {
         console.log("handle submit - ", res.data);
