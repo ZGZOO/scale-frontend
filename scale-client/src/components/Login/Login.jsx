@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
-function Login() {
+function Login({ handleLogin }) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    console.log("Login-useEffect: ", user);
-  }, [user]);
 
   const handleChange = (event) => {
     console.log("event", event.target.name, event.target.value);
@@ -20,24 +15,25 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = {
+    const userdata = {
       user: {
         username: loginInput.username,
         password: loginInput.password,
       },
     };
-    console.log(JSON.stringify(data));
+    console.log(JSON.stringify(userdata));
     axios({
       url: `http://localhost:3000/users/login`,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      data: JSON.stringify(data),
+      data: JSON.stringify(userdata),
     })
       .then((res) => {
         console.log("handle submit - ", res.data);
-        setUser(res.data);
+        handleLogin(res.data);
+        // setUser(res.data);
         // console.log("handle submit print user - ", user);
         // props.history.push("/items");
       })
@@ -45,42 +41,38 @@ function Login() {
     setLoginInput({ username: "", password: "" });
   };
 
-  if (!user) {
-    return (
-      <div className="login">
-        {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
-        <h3>Log In Page</h3>
-        <form onSubmit={handleSubmit}>
-          <label>Username</label>
-          <br />
-          <input
-            placeholder="Username"
-            name="username"
-            value={loginInput.username}
-            onChange={handleChange}
-          ></input>
-          <br />
-          <br />
-          <label>Password</label>
-          <br />
-          <input
-            placeholder="Password"
-            name="password"
-            value={loginInput.password}
-            onChange={handleChange}
-          ></input>
-          <br />
-          <br />
-          <button type="submit">Log In</button>
-          <NavLink to="/">
-            <button>Cancel</button>
-          </NavLink>
-        </form>
-      </div>
-    );
-  } else {
-    return <h1>{user.success}!</h1>;
-  }
+  return (
+    <div className="login">
+      {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
+      <h3>Log In Page</h3>
+      <form onSubmit={handleSubmit}>
+        <label>Username</label>
+        <br />
+        <input
+          placeholder="Username"
+          name="username"
+          value={loginInput.username}
+          onChange={handleChange}
+        ></input>
+        <br />
+        <br />
+        <label>Password</label>
+        <br />
+        <input
+          placeholder="Password"
+          name="password"
+          value={loginInput.password}
+          onChange={handleChange}
+        ></input>
+        <br />
+        <br />
+        <button type="submit">Log In</button>
+        <NavLink to="/">
+          <button>Cancel</button>
+        </NavLink>
+      </form>
+    </div>
+  );
 }
 
 export default Login;

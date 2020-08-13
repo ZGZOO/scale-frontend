@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.scss";
 
-function Nav() {
+function Nav({ user }) {
   return (
     <nav className="navbar">
       <NavLink to="/">
@@ -12,6 +12,14 @@ function Nav() {
           className="logo"
         />
       </NavLink>
+      {user === null ? (
+        <>
+          <NavLink to="/login">Log In</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
+        </>
+      ) : (
+        <NavLink to="/">Log Out</NavLink>
+      )}
     </nav>
   );
 }
