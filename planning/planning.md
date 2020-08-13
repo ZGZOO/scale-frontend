@@ -124,7 +124,7 @@ Relationship:
 | Deploy (continuously) to Netlify                         | H              | 1/4                  | 3                 | Day 1 - 2 | o            |
 | Add SCSS                                                 | H              | 2 mins               | 2 mins            | Day 2     | o            |
 | Login Page + User Auth (frontend with form)              | H              | 6                    | ??                | Day 2     | x            |
-| Set up CORS in rails                                     | H              | 5 mins               | ??                | Day 2     | x            |
+| Set up CORS in rails                                     | H              | 5 mins               | 5 mins            | Day 2     | o?           |
 | Set up weight model (lb, kg)                             | H (hard, how?) | 6                    | ??                | Day 2     | x            |
 | Set up period model (date and weight)                    | H (hard, how?) | 6                    | ??                | Day 2     | x            |
 | User create an account                                   | H              | 2                    | ??                | Day 2     | x            |

@@ -12,9 +12,9 @@ function App() {
       <Nav />
       <main>
         <Switch>
-          <Route path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
+          <Route path="/" component={Home} />
         </Switch>
       </main>
       <footer>&copy;2020 Jenny Xu</footer>

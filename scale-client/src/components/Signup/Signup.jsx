@@ -21,7 +21,7 @@ function Signup() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios({
-      url: `http://localhost:3000/users/login`,
+      url: `http://localhost:3000/users`,
       method: "POST",
       data: loginInput,
     })
@@ -36,9 +36,9 @@ function Signup() {
   };
 
   return (
-    <div className="login">
+    <div className="signup">
       {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
-      <h3>Log In Page</h3>
+      <h3>Sign Up Page</h3>
       <form onSubmit={handleSubmit}>
         <label>Username</label>
         <br />
