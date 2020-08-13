@@ -8,6 +8,10 @@ function Signup() {
 
   useEffect(() => {
     console.log("Login-useEffect: ", user);
+    const showContent = () => {
+      return <h1>Hi!</h1>;
+    };
+    showContent();
   }, [user]);
 
   const handleChange = (event) => {

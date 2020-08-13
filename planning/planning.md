@@ -125,12 +125,13 @@ Relationship:
 | Add SCSS                                                     | H              | 2 mins               | 2 mins            | Day 2     | o            |
 | Login Page + User Auth (frontend form) + Rearrange Home, Nav | H              | 6                    | 8                 | Day 2     | o            |
 | Set up CORS in rails                                         | H              | 5 mins               | 5 mins            | Day 2     | o            |
-| Continue since I got auth working                            | H              | ?                    | ?                 | Day 2     | x            |
-| Deploy backend to Heroku                                     | H              | 1                    | ?                 | Day 2     | x            |
-| Set up weight model (lb, kg)                                 | H (hard, how?) | 6                    | ??                | Day 2     | x            |
-| Set up period model (date and weight)                        | H (hard, how?) | 6                    | ??                | Day 2     | x            |
-| User create an account                                       | H              | 2                    | ??                | Day 2     | x            |
-| User input/edit/delete weight                                | H              | 2                    | ??                | Day 2     | x            |
+| Render success message when user login                       | H              | 1                    | 10 mins           | Day 2     | o            |
+| after user login, show a different router                    | H              | 1                    | ??                | Day 3     | x            |
+| Deploy backend to Heroku                                     | H              | 1                    | ?                 | Day 3     | x            |
+| Set up weight model (lb, kg)                                 | H (hard, how?) | 6                    | ??                | Day 3     | x            |
+| Set up period model (date and weight)                        | H (hard, how?) | 6                    | ??                | Day 3     | x            |
+| User create an account                                       | H              | 2                    | ??                | Day 3     | x            |
+| User input/edit/delete weight                                | H              | 2                    | ??                | Day 3     | x            |
 | User create/edit/delete a period                             | H              | 2                    | ??                | Day 2 - 3 | x            |
 | User sees the default line chart                             | H              | 2                    | ??                | Day 2 - 3 | x            |
 | User sees the line chart in each period                      | H              | 2                    | ??                | Day 3 - 4 | x            |

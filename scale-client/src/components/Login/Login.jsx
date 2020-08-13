@@ -45,38 +45,42 @@ function Login() {
     setLoginInput({ username: "", password: "" });
   };
 
-  return (
-    <div className="login">
-      {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
-      <h3>Log In Page</h3>
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <br />
-        <input
-          placeholder="Username"
-          name="username"
-          value={loginInput.username}
-          onChange={handleChange}
-        ></input>
-        <br />
-        <br />
-        <label>Password</label>
-        <br />
-        <input
-          placeholder="Password"
-          name="password"
-          value={loginInput.password}
-          onChange={handleChange}
-        ></input>
-        <br />
-        <br />
-        <button type="submit">Log In</button>
-        <NavLink to="/">
-          <button>Cancel</button>
-        </NavLink>
-      </form>
-    </div>
-  );
+  if (!user) {
+    return (
+      <div className="login">
+        {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
+        <h3>Log In Page</h3>
+        <form onSubmit={handleSubmit}>
+          <label>Username</label>
+          <br />
+          <input
+            placeholder="Username"
+            name="username"
+            value={loginInput.username}
+            onChange={handleChange}
+          ></input>
+          <br />
+          <br />
+          <label>Password</label>
+          <br />
+          <input
+            placeholder="Password"
+            name="password"
+            value={loginInput.password}
+            onChange={handleChange}
+          ></input>
+          <br />
+          <br />
+          <button type="submit">Log In</button>
+          <NavLink to="/">
+            <button>Cancel</button>
+          </NavLink>
+        </form>
+      </div>
+    );
+  } else {
+    return <h1>{user.success}!</h1>;
+  }
 }
 
 export default Login;
