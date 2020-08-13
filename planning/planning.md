@@ -121,11 +121,12 @@ Relationship:
 | Create Home Component                                        | H              | 15 mins              | 15 mins           | Day 1     | o            |
 | Create Nav Component                                         | H              | 15 mins              | 15 mins           | Day 1     | o            |
 | Create Login Component                                       | H              | 15 mins              | 15 mins           | Day 1     | o            |
-| Deploy (continuously) to Netlify                             | H              | 1/4                  | 3                 | Day 1 - 2 | o            |
+| Deploy (continuously) to Netlify                             | H              | 15 mins              | 3                 | Day 1 - 2 | o            |
 | Add SCSS                                                     | H              | 2 mins               | 2 mins            | Day 2     | o            |
 | Login Page + User Auth (frontend form) + Rearrange Home, Nav | H              | 6                    | 8                 | Day 2     | o            |
 | Set up CORS in rails                                         | H              | 5 mins               | 5 mins            | Day 2     | o            |
 | Continue since I got auth working                            | H              | ?                    | ?                 | Day 2     | x            |
+| Deploy backend to Heroku                                     | H              | 1                    | ?                 | Day 2     | x            |
 | Set up weight model (lb, kg)                                 | H (hard, how?) | 6                    | ??                | Day 2     | x            |
 | Set up period model (date and weight)                        | H (hard, how?) | 6                    | ??                | Day 2     | x            |
 | User create an account                                       | H              | 2                    | ??                | Day 2     | x            |
