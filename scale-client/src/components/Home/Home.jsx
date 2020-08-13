@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.scss";
 
 function Home({ handleLogout }) {
+  useEffect(() => {
+    handleLogout(null);
+  }, []);
+
   return (
     <div className="Home">
       <h1>Home</h1>
