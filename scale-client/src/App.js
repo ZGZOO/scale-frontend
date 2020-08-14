@@ -51,7 +51,7 @@ const App = () => {
               <Logout {...props} handleLogout={setTheUser} user={user} />
             )}
           />
-          <Route path="/" render={() => <Home />} />
+          <Route path="/home" render={() => <Home />} />
         </Switch>
       </main>
       <footer>&copy;2020 Jenny Xu</footer>

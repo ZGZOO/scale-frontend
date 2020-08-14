@@ -5,7 +5,7 @@ import "./Nav.scss";
 function Nav({ user, status }) {
   return (
     <nav className="navbar">
-      <NavLink to="/">
+      <NavLink to="/home">
         <img
           src="https://res.cloudinary.com/headincloud/image/upload/v1597210518/scale_logo.png"
           alt="Scale Logo"
