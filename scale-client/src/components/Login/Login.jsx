@@ -6,7 +6,7 @@ import "./Login.scss";
 
 function Login(props) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedInStatus, setLoggedInStatus] = useState(true);
 
   const handleChange = (event) => {
     console.log("event", event.target.name, event.target.value);
@@ -39,7 +39,7 @@ function Login(props) {
         if (res.data.status !== 401) {
           props.history.push("/userpage");
         } else {
-          setLoggedIn(false);
+          setLoggedInStatus(false);
           console.log("Log in failed!");
         }
       })
@@ -75,9 +75,11 @@ function Login(props) {
         <NavLink to="/">
           <button>Cancel</button>
         </NavLink>
-        <div className={loggedIn ? "disappear" : ""}>
+        <br />
+        <div className={loggedInStatus ? "disappear" : ""}>
           Logged in failed! Please try again!
         </div>
+        <br />
       </form>
     </div>
   );
