@@ -5,6 +5,7 @@ import apiUrl from "../../apiConfig";
 
 function Login(props) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
+  const [loggedIn, setLoggedIn] = useState(true);
 
   const handleChange = (event) => {
     console.log("event", event.target.name, event.target.value);
@@ -36,9 +37,9 @@ function Login(props) {
         props.handleLogin(res.data);
         if (res.data.status !== 401) {
           props.history.push("/userpage");
-        }
-        else{
-          console.log("Log in failed!")
+        } else {
+          setLoggedIn(false);
+          console.log("Log in failed!");
         }
       })
       .catch(console.error);
@@ -74,6 +75,9 @@ function Login(props) {
         <NavLink to="/">
           <button>Cancel</button>
         </NavLink>
+        <div className={loggedIn ? "disappear" : ""}>
+          Logged in failed! Please try again!
+        </div>
       </form>
     </div>
   );
