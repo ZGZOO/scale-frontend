@@ -48,7 +48,6 @@ function Login(props) {
 
   return (
     <div className="login">
-      {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
       <h3>Log In Page</h3>
       <form onSubmit={handleSubmit}>
         <label>Username</label>
