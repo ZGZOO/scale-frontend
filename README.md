@@ -89,14 +89,36 @@ Scale is an app that allows the user to input the weight for a certain day, and 
 
 - Reason: Didn't use `Redirect`, or props.history.push(). Only `Route` does not do the work.
 - Solution: I used props.history.push()
+
   App.js
   ![Routes in App.js](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.40.57_PM_jbnzgy.png)
+
   Login.jsx
   ![Login.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.41.44_PM_ntvgbj.png)
+
   Signup.jsx
   ![Signup.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.42.06_PM_xo7idm.png)
+
   Logout.jsx
+
   ![Logout.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.41.12_PM_ftlyah.png)
+
+### 4. Backend failed after taking all the contents under the nested folder in the backend directory in order to deploy to Heroku
+
+- Reason: `.env` was lost in the process
+
+  Errors indicating something about .env
+  ![error indicating something about .env](https://res.cloudinary.com/headincloud/image/upload/v1597427647/Screen_Shot_2020-08-14_at_10.00.22_AM_dvigru.png)
+  ![error indicating something about .env](https://res.cloudinary.com/headincloud/image/upload/v1597427646/Screen_Shot_2020-08-14_at_10.00.33_AM_qtsjq3.png)
+  ![error indicating something about .env](https://res.cloudinary.com/headincloud/image/upload/v1597427645/Screen_Shot_2020-08-14_at_10.01.27_AM_u6ppli.png)
+
+  .env file is missing
+  ![.env file is missing](https://res.cloudinary.com/headincloud/image/upload/v1597427770/Screen_Shot_2020-08-14_at_10.27.23_AM_jzymhi.png)
+
+- Solution: Carefully move all the files to the desired destination, including the hidden files!! In this case, I lost my `.env`file, so I just created a new one under the right directory (`touch .env`).
+
+  Use this command to move files
+  ![use this command](https://res.cloudinary.com/headincloud/image/upload/v1597427779/Screen_Shot_2020-08-14_at_10.20.30_AM_ztenpa.png)
 
 ## Unsolved Problems
 
