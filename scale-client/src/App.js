@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -52,6 +52,7 @@ const App = () => {
             )}
           />
           <Route path="/home" render={() => <Home />} />
+          <Redirect from="/" to="/home" />
         </Switch>
       </main>
       <footer>&copy;2020 Jenny Xu</footer>
