@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
-function Signup() {
+function Signup(props) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    console.log("Login-useEffect: ", user);
-    const showContent = () => {
-      return <h1>Hi!</h1>;
-    };
-    showContent();
-  }, [user]);
 
   const handleChange = (event) => {
     console.log("event", event.target.name, event.target.value);
@@ -24,16 +15,24 @@ function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const userdata = {
+      user: {
+        username: loginInput.username,
+        password: loginInput.password,
+      },
+    };
     axios({
       url: `http://localhost:3000/users`,
       method: "POST",
-      data: loginInput,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify(userdata),
     })
       .then((res) => {
         console.log("handle submit - ", res.data);
-        setUser(res.data);
-        // console.log("handle submit print user - ", user);
-        // props.history.push("/items");
+        props.handleSignup(res.data);
+        props.history.push("/userpage");
       })
       .catch(console.error);
     setLoginInput({ username: "", password: "" });

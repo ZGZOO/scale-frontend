@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
-function Login({ handleLogin }) {
+function Login(props) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
 
   const handleChange = (event) => {
@@ -32,10 +32,8 @@ function Login({ handleLogin }) {
     })
       .then((res) => {
         console.log("handle submit - ", res.data);
-        handleLogin(res.data);
-        // setUser(res.data);
-        // console.log("handle submit print user - ", user);
-        // props.history.push("/items");
+        props.handleLogin(res.data);
+        props.history.push("/userpage");
       })
       .catch(console.error);
     setLoginInput({ username: "", password: "" });
