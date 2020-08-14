@@ -11,6 +11,7 @@ function Logout(props) {
       result = "Good bye!";
     }
   }, []);
+  // setTimeout
   return <h1>{result}</h1>;
 }
 

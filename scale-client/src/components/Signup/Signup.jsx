@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import apiUrl from "../../apiConfig";
 
 function Signup(props) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
@@ -22,7 +23,7 @@ function Signup(props) {
       },
     };
     axios({
-      url: `http://localhost:3000/users`,
+      url: `${apiUrl}/users`,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
