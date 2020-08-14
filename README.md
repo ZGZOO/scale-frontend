@@ -85,6 +85,19 @@ Scale is an app that allows the user to input the weight for a certain day, and 
   end
   ```
 
+### 3. Redirect to user page after user signed in
+
+- Reason: Didn't use `Redirect`, or props.history.push(). Only `Route` does not do the work.
+- Solution: I used props.history.push()
+  App.js
+  ![Routes in App.js](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.40.57_PM_jbnzgy.png)
+  Login.jsx
+  ![Login.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.41.44_PM_ntvgbj.png)
+  Signup.jsx
+  ![Signup.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.42.06_PM_xo7idm.png)
+  Logout.jsx
+  ![Logout.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.41.12_PM_ftlyah.png)
+
 ## Unsolved Problems
 
 ## Snippet of Code
