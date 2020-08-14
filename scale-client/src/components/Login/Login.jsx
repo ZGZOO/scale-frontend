@@ -34,7 +34,12 @@ function Login(props) {
       .then((res) => {
         console.log("handle submit - ", res.data);
         props.handleLogin(res.data);
-        props.history.push("/userpage");
+        if (res.data.status !== 401) {
+          props.history.push("/userpage");
+        }
+        else{
+          console.log("Log in failed!")
+        }
       })
       .catch(console.error);
     setLoginInput({ username: "", password: "" });
