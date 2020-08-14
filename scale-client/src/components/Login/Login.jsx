@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import apiUrl from "../../apiConfig";
+import "./Login.scss";
 
 function Login(props) {
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
