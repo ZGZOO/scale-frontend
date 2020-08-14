@@ -1,11 +1,7 @@
 import React from "react";
 import "./Home.scss";
 
-function Home({ handleLogout, user }) {
-  // useEffect(() => {
-  //   handleLogout(null);
-  // }, []);
-
+function Home() {
   return (
     <div className="Home">
       <h1>Home</h1>
