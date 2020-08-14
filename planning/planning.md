@@ -126,9 +126,9 @@ Relationship:
 | Login Page + Signup Page + User Auth (frontend form)                         | H              | 6                    | 8                 | Day 2     | o            |
 | Set up CORS in rails                                                         | H              | 5 mins               | 5 mins            | Day 2     | o            |
 | Render success message when user login                                       | H              | 1                    | 10 mins           | Day 2     | o            |
-| after user login, show a different router                                    | H              | 1                    | 3                 | Day 3     | o            |
-| after user logout, go to home and nav will change back with login and signup | H              | 1                    | 30 mins           | Day 3     | o            |
-| complete flow of sign in, log in, log out                                    | H              | 2                    | 2                 | Day 3     | o            |
+| After user login, show a different router                                    | H              | 1                    | 3                 | Day 3     | o            |
+| After user logout, go to home and nav will change back with login and signup | H              | 1                    | 30 mins           | Day 3     | o            |
+| Complete flow of sign in, log in, log out                                    | H              | 2                    | 2                 | Day 3     | o            |
 | Deploy backend to Heroku                                                     | H              | 1                    | ?                 | Day 3     | x            |
 | Set up weight model (lb, kg)                                                 | H (hard, how?) | 6                    | ??                | Day 3     | x            |
 | Set up period model (date and weight)                                        | H (hard, how?) | 6                    | ??                | Day 3     | x            |
