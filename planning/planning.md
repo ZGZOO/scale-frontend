@@ -130,6 +130,7 @@ Relationship:
 | After user logout, go to home and nav will change back with login and signup | H              | 1                    | 30 mins           | Day 3     | o            |
 | Complete flow of sign in, log in, log out                                    | H              | 2                    | 2                 | Day 3     | o            |
 | Deploy backend to Heroku                                                     | H              | 1                    | 2                 | Day 4     | o            |
+| Link Frontend to Heroku                                                      | H              | 15 mins              | 5 mins            | Day 4     | o            |
 | Set up weight model (lb, kg)                                                 | H (hard, how?) | 6                    | ??                | Day 4     | x            |
 | Set up period model (date and weight)                                        | H (hard, how?) | 6                    | ??                | Day 4     | x            |
 | User input/edit/delete weight                                                | H              | 2                    | ??                | Day 4     | x            |
