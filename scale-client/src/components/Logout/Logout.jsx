@@ -12,7 +12,7 @@ function Logout(props) {
     }
   }, []);
   // setTimeout
-  return <h1>{result}</h1>;
+  return <h1>Hello</h1>;
 }
 
 export default Logout;
