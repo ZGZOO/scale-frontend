@@ -129,14 +129,14 @@ Relationship:
 | After user login, show a different router                                    | H              | 1                    | 3                 | Day 3     | o            |
 | After user logout, go to home and nav will change back with login and signup | H              | 1                    | 30 mins           | Day 3     | o            |
 | Complete flow of sign in, log in, log out                                    | H              | 2                    | 2                 | Day 3     | o            |
-| Deploy backend to Heroku                                                     | H              | 1                    | ?                 | Day 3     | x            |
-| Set up weight model (lb, kg)                                                 | H (hard, how?) | 6                    | ??                | Day 3     | x            |
-| Set up period model (date and weight)                                        | H (hard, how?) | 6                    | ??                | Day 3     | x            |
-| User input/edit/delete weight                                                | H              | 2                    | ??                | Day 3     | x            |
-| User create/edit/delete a period                                             | H              | 2                    | ??                | Day 2 - 3 | x            |
-| User sees the default line chart                                             | H              | 2                    | ??                | Day 2 - 3 | x            |
-| User sees the line chart in each period                                      | H              | 2                    | ??                | Day 3 - 4 | x            |
-| User set chart to be public or private                                       | H              | 2                    | ??                | Day 3 - 4 | x            |
+| Deploy backend to Heroku                                                     | H              | 1                    | 2                 | Day 4     | o            |
+| Set up weight model (lb, kg)                                                 | H (hard, how?) | 6                    | ??                | Day 4     | x            |
+| Set up period model (date and weight)                                        | H (hard, how?) | 6                    | ??                | Day 4     | x            |
+| User input/edit/delete weight                                                | H              | 2                    | ??                | Day 4     | x            |
+| User create/edit/delete a period                                             | H              | 2                    | ??                | Day 4     | x            |
+| User sees the default line chart                                             | H              | 2                    | ??                | Day 4     | x            |
+| User sees the line chart in each period                                      | H              | 2                    | ??                | Day 4     | x            |
+| User set chart to be public or private                                       | H              | 2                    | ??                | Day 4     | x            |
 | User find a friend                                                           | H (hard)       | 3                    | ??                | Day 4     | x            |
 | User add a friend                                                            | H (hard)       | 5                    | ??                | Day 4     | x            |
 | User delete a friend                                                         | H (easy)       | 5                    | ??                | Day 4     | x            |
