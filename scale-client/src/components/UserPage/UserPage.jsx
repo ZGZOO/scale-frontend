@@ -6,6 +6,7 @@ function UserPage({ user }) {
   //   } else {
   //     return <h1>{user.success}</h1>;
   //   }
+  console.log(user);
   return <h1>In the User Page</h1>;
 }
 
