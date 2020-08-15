@@ -17,7 +17,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    if (user !== null && user.status === 401) {
+    if (user === null) {
+      setLoggedIn(false);
+    } else if (user !== null && user.status === 401) {
       setLoggedIn(false);
     } else {
       setLoggedIn(true);
