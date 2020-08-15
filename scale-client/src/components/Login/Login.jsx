@@ -76,6 +76,7 @@ function Login(props) {
           <button>Cancel</button>
         </NavLink>
         <br />
+        <br />
         <div className={loggedInStatus ? "disappear" : ""}>
           Logged in failed! Please try again!
         </div>
