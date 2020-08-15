@@ -98,14 +98,14 @@ Scale is an app that allows the user to input the weight for a certain day, and 
   ![Login.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.41.44_PM_ntvgbj.png)
 
   Signup.jsx
-  
+
   ![Signup.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.42.06_PM_xo7idm.png)
 
   Logout.jsx
 
   ![Logout.jsx](https://res.cloudinary.com/headincloud/image/upload/v1597376731/Screen_Shot_2020-08-13_at_8.41.12_PM_ftlyah.png)
 
-### 4. Backend failed after taking all the contents under the nested folder in the backend directory in order to deploy to Heroku
+### 4. Backend failed after taking all the contents under the nested folder out to the root of the backend directory in order to deploy to Heroku
 
 - Reason: `.env` was lost in the process
 
@@ -121,6 +121,40 @@ Scale is an app that allows the user to input the weight for a certain day, and 
 
   Use this command to move files
   ![use this command](https://res.cloudinary.com/headincloud/image/upload/v1597427779/Screen_Shot_2020-08-14_at_10.20.30_AM_ztenpa.png)
+
+### 5. After successfully deploying backend to Heroku, I still get an error.
+
+![The error in the console](https://res.cloudinary.com/headincloud/image/upload/v1597521108/Screen_Shot_2020-08-14_at_12.41.36_PM_rf5hco.png)
+
+- Reason: Missed a step in the md file!! (Need to read it carefully!)
+
+  The step is: migrate on Heroku
+  ![migrate on Heroku](https://res.cloudinary.com/headincloud/image/upload/v1597521221/Screen_Shot_2020-08-14_at_2.01.43_PM_ybdwrx.png)
+
+- Solution: Run the command in the picture above. Again, need to read the doc carefully!
+
+### 6. Error during deploying to Netlify.
+
+![The error during deploying to Netlify](https://res.cloudinary.com/headincloud/image/upload/v1597521246/Screen_Shot_2020-08-14_at_12.07.39_PM_rgqyrb.png)
+
+- Reason: As shown in the picture above.
+
+- Solution:
+  - Follow what is suggested in the picture. I added `CI= react-scripts build`
+  - Or, advised by Madeline, in the build command in the package.json, add `CI=false` before the command it is currently displaying.
+
+### 7. Backend on Heroku doesn't have the existing users anymore. So, user auth failed.
+
+![In the console](https://res.cloudinary.com/headincloud/image/upload/v1597521255/Screen_Shot_2020-08-14_at_2.11.04_PM_kveibo.png)
+
+![In the Postman](https://res.cloudinary.com/headincloud/image/upload/v1597521849/Screen_Shot_2020-08-14_at_2.15.08_PM_hngrq5.png)
+
+- Reason: Didn't seed the user on Heroku! When I put the database on Heroku, it's an entirely new version of my database. When I run my site locally, it is pulling data from my local machine, which the data exist. When I run my site via Netlify, it is pulling data from backend on Heroku, meaning it no longer has access to my local machine, and I haven't seed any data on Heroku, therefore, no data exist.
+
+- Solution:
+  - Write `seed.rb`, and seed it on Heroku: `heroku run rails db:seed`.
+  - Run rails on Heroku commands with `heroku run <rails command>`, like `heroku run rails c`.
+  - Or, just test the "Sign In" functionality directly through frontend.
 
 ## Unsolved Problems
 
