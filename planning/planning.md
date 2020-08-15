@@ -117,7 +117,7 @@ Relationship:
 | Create an icon with Canva                                                    | H              | 15 mins              | 45 mins           | Day 1     | o            |
 | Set up index.html with icon and delete unnecessary stuff                     | H              | 5 mins               | 5 mins            | Day 1     | o            |
 | Set up index.js with 'react-router-dom' (Router)                             | H              | 5 mins               | 5 mins            | Day 1     | o            |
-| Set up App.js with 'react-router-dom' ??                                     | H              | 30 mins              | 1                 | Day 1     | o            |
+| Set up App.js with 'react-router-dom' (Route, Switch, Redirect)              | H              | 30 mins              | 1                 | Day 1     | o            |
 | Create Home Component                                                        | H              | 15 mins              | 15 mins           | Day 1     | o            |
 | Create Nav Component                                                         | H              | 15 mins              | 15 mins           | Day 1     | o            |
 | Create Login Component                                                       | H              | 15 mins              | 15 mins           | Day 1     | o            |
@@ -130,7 +130,7 @@ Relationship:
 | After user logout, go to home and nav will change back with login and signup | H              | 1                    | 30 mins           | Day 3     | o            |
 | Complete flow of sign in, log in, log out                                    | H              | 2                    | 2                 | Day 3     | o            |
 | Deploy backend to Heroku                                                     | H              | 1                    | 2                 | Day 4     | o            |
-| Link Frontend to Heroku                                                      | H              | 15 mins              | 5 mins            | Day 4     | o            |
+| Test if Heroku works with frontend (sign up === seed data)                   | H              | 15 mins              | 1.5               | Day 4     | o            |
 | Set up weight model (lb, kg)                                                 | H (hard, how?) | 6                    | ??                | Day 4     | x            |
 | Set up period model (date and weight)                                        | H (hard, how?) | 6                    | ??                | Day 4     | x            |
 | User input/edit/delete weight                                                | H              | 2                    | ??                | Day 4     | x            |
