@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.scss";
 
-function Nav({ user, status }) {
+function Nav({ loggedIn }) {
   return (
     <nav className="navbar">
       <NavLink to="/home">
@@ -12,18 +12,18 @@ function Nav({ user, status }) {
           className="logo"
         />
       </NavLink>
-      {user === null ? (
-        <>
-          <NavLink to="/login">Log In</NavLink>
-          <NavLink to="/signup">Sign Up</NavLink>
-        </>
-      ) : (
+      {loggedIn ? (
         <>
           <NavLink to="/logout">Log Out</NavLink>
           <NavLink to="/userpage">My page</NavLink>
         </>
+      ) : (
+        <>
+          <NavLink to="/login">Log In</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
+        </>
       )}
-      <h3>{status}</h3>
+      {loggedIn ? <h3>log-in</h3> : <h3>log-out</h3>}
     </nav>
   );
 }

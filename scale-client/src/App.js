@@ -10,17 +10,17 @@ import Logout from "./components/Logout/Logout";
 
 const App = () => {
   const [user, setUser] = useState(null);
-  const [status, setStatus] = useState("log-out");
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const setTheUser = (person) => {
     setUser(person);
   };
 
   useEffect(() => {
-    if (user === null) {
-      setStatus("log-out");
+    if (user.status === 401) {
+      setLoggedIn(false);
     } else {
-      setStatus("log-in");
+      setLoggedIn(true);
     }
   }, [user]);
 
@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Nav user={user} status={status} />
+      <Nav loggedIn={loggedIn} />
       <main>
         <Switch>
           <Route
