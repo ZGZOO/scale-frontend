@@ -4,10 +4,11 @@ function Logout(props) {
   // let result = "";
   useEffect(() => {
     setTimeout(function () {
+      props.handleLogout(null);
       props.history.push("/home");
+      console.log("logging out");
     }, 3000);
-    props.handleLogout(null);
-    console.log("logging out");
+
     // if (props.user !== null) {
     //   result = "Logging out...";
     // } else {
