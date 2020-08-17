@@ -16,6 +16,7 @@ function Nav({ loggedIn }) {
         <>
           <NavLink to="/logout">Log Out</NavLink>
           <NavLink to="/userpage">My page</NavLink>
+          <NavLink to="/userpage/addWeight">Add entry</NavLink>
         </>
       ) : (
         <>
@@ -29,5 +30,3 @@ function Nav({ loggedIn }) {
 }
 
 export default Nav;
-
-

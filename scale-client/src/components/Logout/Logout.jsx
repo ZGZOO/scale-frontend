@@ -8,12 +8,6 @@ function Logout(props) {
       props.history.push("/home");
       console.log("logging out");
     }, 3000);
-
-    // if (props.user !== null) {
-    //   result = "Logging out...";
-    // } else {
-    //   result = "Good bye!";
-    // }
   }, []);
 
   return <h1>Logging out ...</h1>;

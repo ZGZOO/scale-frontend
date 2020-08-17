@@ -77,7 +77,7 @@ function InputWeight(props) {
         <br />
         <br />
         <button type="submit">Add Entry</button>
-        <NavLink to="/">
+        <NavLink to="/userpage">
           <button>Cancel</button>
         </NavLink>
         <br />
