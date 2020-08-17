@@ -156,6 +156,24 @@ Scale is an app that allows the user to input the weight for a certain day, and 
   - Run rails on Heroku commands with `heroku run <rails command>`, like `heroku run rails c`.
   - Or, just test the "Sign In" functionality directly through frontend.
 
+### 8. Production backend's log in failed.
+
+![error](https://res.cloudinary.com/headincloud/image/upload/v1597689470/Screen_Shot_2020-08-15_at_1.32.25_PM_xj0mjo_dj3j5y.png)
+
+- Reason:
+  Madeline (my project leader) found this [Medium article online](https://medium.com/@taiseiyamadashindosu/2020-authenticating-and-authorizing-your-react-app-with-rails-api-1-2-5f7f23380e1a), here is the reason:
+  ![reason](https://res.cloudinary.com/headincloud/image/upload/v1597689914/Screen_Shot_2020-08-17_at_10.12.19_AM_mmovev.png)
+
+- Solution:
+  - Use every way to debug!! Eg: `heroku --logs`, (which I forgot). Read carefully! There are possible errors:
+    - `TypeError (no implicit conversion of nil into String)`
+    - `app/controllers/users_controller.rb:57:in 'create_token'`
+    - `app/controllers/users_controller.rb:9:in 'login'`
+  ![heroku logs](https://res.cloudinary.com/headincloud/image/upload/v1597689646/Screen_Shot_2020-08-17_at_11.40.32_AM_l4g8kt.png)
+  and from there, google!
+  - The solution is what is written in the screenshot above in the "Reason" section. Change `ENV['JWT_SECRET']` to `ENV['SECRET_KEY_BASE']`
+
+
 ## Unsolved Problems
 
 ## Snippet of Code
