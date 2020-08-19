@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./Logout.scss";
 
 function Logout(props) {
   // let result = "";
@@ -10,7 +11,11 @@ function Logout(props) {
     }, 2000);
   }, []);
 
-  return <h1>Logging out ...</h1>;
+  return (
+    <div className="logouttitle">
+      <h1>Logging out ...</h1>
+    </div>
+  );
 }
 
 export default Logout;
