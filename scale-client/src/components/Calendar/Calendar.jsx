@@ -20,6 +20,7 @@ function formatDate(date, format, locale) {
 }
 
 export default function Example() {
+  
   const FORMAT = "MM/dd/yyyy";
   return (
     <DayPickerInput

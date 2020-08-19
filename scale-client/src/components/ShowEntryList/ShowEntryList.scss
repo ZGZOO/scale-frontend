@@ -1,0 +1,27 @@
+.entryContainer {
+  text-align: left;
+  background-color: aquamarine;
+  width: 80%;
+  padding: 5px 20px;
+  margin: 10px auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.entryContainer i {
+  font-size: 33px;
+}
+
+.iconGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.addEntryDiv a {
+  text-decoration: none;
+  cursor: pointer;
+  color: red;
+}

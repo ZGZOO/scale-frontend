@@ -7,7 +7,7 @@ function Logout(props) {
       props.handleLogout(null);
       props.history.push("/home");
       console.log("logging out");
-    }, 3000);
+    }, 2000);
   }, []);
 
   return <h1>Logging out ...</h1>;

@@ -1,0 +1,115 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import apiUrl from "../../apiConfig";
+import { NavLink } from "react-router-dom";
+import "./ShowEntryList.scss";
+
+function ShowEntryList({ user }) {
+  const [entries, setEntries] = useState([]);
+
+  const getEntries = async (data) => {
+    try {
+      console.log("getEntries: ", data);
+      const response = await axios.get(`${apiUrl}/users/${data.id}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+
+      console.log(
+        "getEntries - response.data.entries: ",
+        response.data.entries
+      );
+      setEntries(response.data.entries);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    if (user !== null) {
+      //   const parsedUser = JSON.parse(user.user);
+      //   console.log("useEffect, parse: ", JSON.parse(user.user));
+      //   getEntries(parsedUser);
+      //   console.log(user.user);
+      getEntries(user.user);
+    }
+  }, []);
+
+  const handleDelete = async (data, id) => {
+    console.log("in handle delete");
+    const response = await axios({
+      url: `${apiUrl}/users/${data.id}/entries/${id}`,
+      method: "DELETE",
+    });
+    getEntries(user.user);
+    console.log("handleDelete", response);
+  };
+
+  console.log("entries", entries);
+
+  const entriesArr = entries.map((entry) => {
+    return (
+      <div key={entry.id} className="entryContainer">
+        <div className="dataGroup">
+          <p>
+            Weight: {entry.weight}
+            <span> </span>
+            {entry.unit}
+          </p>
+          <p>
+            Date: {new Date(entry.date).getFullYear()}/
+            {new Date(entry.date).getMonth()}/{new Date(entry.date).getDate()}
+          </p>
+        </div>
+
+        <div className="iconGroup">
+          <NavLink
+            to={{
+              pathname: "/userpage/editWeight",
+              editProps: {
+                entryId: entry.id,
+              },
+            }}
+          >
+            <i className="fa fa-pencil-square-o" id="editIcon"></i>
+          </NavLink>
+
+          <i
+            className="fa fa-trash-o"
+            id="deleteIcon"
+            onClick={() => {
+              handleDelete(user.user, entry.id);
+            }}
+          ></i>
+        </div>
+      </div>
+    );
+  });
+
+  if (!user) {
+    return <p>Loading...</p>;
+  } else if (entries !== null && entries.length === 0) {
+    return (
+      <div className="addEntryDiv">
+        <h2>Hello, {user.user.username}!</h2>
+        <p>You don't have weights yet.</p>
+        <NavLink to="/userpage/addWeight">
+          Add entry<i className="fa fa-calendar-plus-o"></i>
+        </NavLink>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h2>Welcome back, {user.user.username}!</h2>
+        <NavLink to="/userpage/addWeight">
+          Add entry<i className="fa fa-calendar-plus-o"></i>
+        </NavLink>
+        {entriesArr}
+      </div>
+    );
+  }
+}
+
+export default ShowEntryList;

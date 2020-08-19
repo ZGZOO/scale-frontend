@@ -7,5 +7,69 @@ a {
 }
 
 .navbar {
-  border: 1px solid gold;
+  position: fixed;
+  bottom: 0;
+}
+
+.hamburger {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger div {
+  background-color: black;
+  width: 30px;
+  height: 5px;
+  margin: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sideNav {
+  background-color: aqua;
+  // border: 1px solid red;
+  transition: left 0.5s ease;
+  box-sizing: border-box;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: -100vw;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.show {
+  left: 0;
+}
+
+.sideNav a {
+  display: inline-block;
+}
+
+.closebtn {
+  position: fixed;
+  bottom: 0;
+}
+
+.closebars {
+  padding: 25px 10px;
+}
+
+.bar {
+  background-color: black;
+  width: 30px;
+  height: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bar1 {
+  transform: rotate(45deg) translate(4px, 3px);
+}
+
+.bar2 {
+  transform: rotate(-45deg);
 }

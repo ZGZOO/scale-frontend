@@ -7,6 +7,8 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import UserPage from "./components/UserPage/UserPage";
 import Logout from "./components/Logout/Logout";
+import InputWeight from "./components/InputWeight/InputWeight";
+import UpdateWeight from "./components/UpdateWeight/UpdateWeight";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -29,13 +31,20 @@ const App = () => {
   // if (status === "log-in") {
   //   return <Redirect to={"/userpage"} />;
   // }
-  
 
   return (
     <div className="App">
       <Nav loggedIn={loggedIn} />
       <main>
         <Switch>
+          <Route
+            path="/userpage/addWeight"
+            render={(props) => <InputWeight {...props} user={user} />}
+          />
+          <Route
+            path="/userpage/editWeight"
+            render={(props) => <UpdateWeight {...props} user={user} />}
+          />
           <Route
             path="/login"
             render={(props) => <Login {...props} handleLogin={setTheUser} />}
@@ -54,6 +63,7 @@ const App = () => {
               <Logout {...props} handleLogout={setTheUser} user={user} />
             )}
           />
+
           <Route path="/home" render={() => <Home />} />
           <Redirect from="/" to="/home" />
         </Switch>

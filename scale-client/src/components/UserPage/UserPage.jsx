@@ -1,22 +1,14 @@
 import React from "react";
-import { Route, NavLink } from "react-router-dom";
-import InputWeight from "../InputWeight/InputWeight";
+import { NavLink } from "react-router-dom";
+
+import ShowEntryList from "../ShowEntryList/ShowEntryList";
 
 function UserPage({ user }) {
   console.log("UserPage - ", user);
   return (
     <>
       <h3>In the User Page</h3>
-      {user !== null && user.status === 200 ? (
-        <h1>{user.success}</h1>
-      ) : (
-        <h1>Hi?</h1>
-      )}
-      {/* <showweightlist /> */}
-      <Route
-        path="/userpage/addWeight"
-        render={(props) => <InputWeight {...props} />}
-      />
+      <ShowEntryList user={user} />
       <NavLink to="/chart">See the chart</NavLink>
     </>
   );

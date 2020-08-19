@@ -2,22 +2,24 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import apiUrl from "../../apiConfig";
-import "./InputWeight.scss";
-// import Calendar from "../Calendar/Calendar";
+import "./UpdateWeight.scss";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
 
-function InputWeight(props) {
+function UpdateWeight(props) {
   const [entryInput, setEntryInput] = useState({
     weight: "",
     unit: "",
     date: "",
   });
   const [userid, setUserid] = useState(null);
+  const [entryid, setEntryid] = useState(null);
 
   useEffect(() => {
-    console.log(props.user.user.id);
+    console.log(props.user.user);
     setUserid(props.user.user.id);
+    console.log("entry id: ", props.location.editProps.entryId);
+    setEntryid(props.location.editProps.entryId);
   }, []);
 
   const handleChange = (event) => {
@@ -39,8 +41,8 @@ function InputWeight(props) {
     };
     console.log(JSON.stringify(entrydata));
     axios({
-      url: `${apiUrl}/users/${userid}/entries`,
-      method: "POST",
+      url: `${apiUrl}/users/${userid}/entries/${entryid}`,
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -65,9 +67,9 @@ function InputWeight(props) {
 
   return (
     <div className="inputWeight">
-      <h3>Input your weight Page</h3>
+      <h3>Update your weight entry</h3>
       <form onSubmit={handleSubmit}>
-        <label>Your Weight Today:</label>
+        <label>Change my weight:</label>
         <br />
         <input
           placeholder="Input your weight:"
@@ -81,13 +83,13 @@ function InputWeight(props) {
         </select>
         <br />
         <br />
-        <label>Today's date:</label>
+        <label>Change the date:</label>
         <br />
         {/* <Calendar /> */}
         <DayPickerInput onDayChange={handleDayChange} />
         <br />
         <br />
-        <button type="submit">Add Entry</button>
+        <button type="submit">Update Entry</button>
         <NavLink to="/userpage">
           <button>Cancel</button>
         </NavLink>
@@ -98,4 +100,4 @@ function InputWeight(props) {
   );
 }
 
-export default InputWeight;
+export default UpdateWeight;
