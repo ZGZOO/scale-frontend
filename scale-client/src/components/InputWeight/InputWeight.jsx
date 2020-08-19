@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import apiUrl from "../../apiConfig";
 import "./InputWeight.scss";
-// import Calendar from "../Calendar/Calendar";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
 
