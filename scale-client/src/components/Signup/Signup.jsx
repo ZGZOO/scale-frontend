@@ -33,6 +33,7 @@ function Signup(props) {
       .then((res) => {
         console.log("handle submit - ", res.data);
         props.handleSignup(res.data);
+        props.handleSignupInput(userdata);
         props.history.push("/userpage");
       })
       .catch(console.error);
@@ -41,34 +42,43 @@ function Signup(props) {
 
   return (
     <div className="signup">
-      {/* <NavLink to="/">&#8678; Back to Home</NavLink> */}
-      <h3>Sign Up Page</h3>
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <br />
-        <input
-          placeholder="Username"
-          name="username"
-          value={loginInput.username}
-          onChange={handleChange}
-        ></input>
-        <br />
-        <br />
-        <label>Password</label>
-        <br />
-        <input
-          placeholder="Password"
-          name="password"
-          value={loginInput.password}
-          onChange={handleChange}
-        ></input>
-        <br />
-        <br />
-        <button type="submit">Sign Up</button>
-        <NavLink to="/">
-          <button>Cancel</button>
-        </NavLink>
-      </form>
+      <h3 className="loginTitle">Sign Up</h3>
+      <div className="loginFormContainer">
+        <form onSubmit={handleSubmit}>
+          <div className="two">
+            <label className="usernameLogo">
+              <i class="fa fa-user-circle"></i>
+            </label>
+            <input
+              placeholder="Username"
+              name="username"
+              value={loginInput.username}
+              onChange={handleChange}
+              className="loginInput"
+            ></input>
+          </div>
+
+          <div className="two">
+            <label className="passwordLogo">
+              <i class="fa fa-lock"></i>
+            </label>
+            <input
+              placeholder="Password"
+              name="password"
+              value={loginInput.password}
+              onChange={handleChange}
+              className="loginInput"
+            ></input>
+          </div>
+
+          <div className="twobuttons">
+            <NavLink to="/">
+              <button>Cancel</button>
+            </NavLink>
+            <button type="submit">Sign Up</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

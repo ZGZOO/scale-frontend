@@ -60,6 +60,9 @@ function Nav({ loggedIn }) {
             </>
           ) : (
             <>
+              <NavLink to="/home" onClick={handleOpenBtn} className="navlink">
+                Home
+              </NavLink>
               <NavLink to="/login" onClick={handleOpenBtn} className="navlink">
                 Log In
               </NavLink>

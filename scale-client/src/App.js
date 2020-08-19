@@ -14,6 +14,11 @@ import WeightChart from "./components/Chart/Chart";
 const App = () => {
   const [user, setUser] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [info, setInfo] = useState(null);
+
+  const setTheInfo = (secret) => {
+    setInfo(secret);
+  };
 
   const setTheUser = (person) => {
     setUser(person);
@@ -56,11 +61,17 @@ const App = () => {
           />
           <Route
             path="/signup"
-            render={(props) => <Signup {...props} handleSignup={setTheUser} />}
+            render={(props) => (
+              <Signup
+                {...props}
+                handleSignup={setTheUser}
+                handleSignupInput={setTheInfo}
+              />
+            )}
           />
           <Route
             path="/userpage"
-            render={(props) => <UserPage {...props} user={user} />}
+            render={(props) => <UserPage {...props} user={user} info={info} />}
           />
           <Route
             path="/logout"

@@ -49,39 +49,55 @@ function Login(props) {
 
   return (
     <div className="login">
-      <h3>Log In Page</h3>
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <br />
-        <input
-          placeholder="Username"
-          name="username"
-          value={loginInput.username}
-          onChange={handleChange}
-        ></input>
-        <br />
-        <br />
-        <label>Password</label>
-        <br />
-        <input
-          placeholder="Password"
-          name="password"
-          value={loginInput.password}
-          onChange={handleChange}
-        ></input>
-        <br />
-        <br />
-        <button type="submit">Log In</button>
-        <NavLink to="/">
-          <button>Cancel</button>
-        </NavLink>
-        <br />
-        <br />
-        <div className={loggedInStatus ? "disappear" : ""}>
-          Logged in failed! Please try again!
-        </div>
-        <br />
-      </form>
+      <h3 className="loginTitle">Log In</h3>
+      <div className="loginFormContainer">
+        <form onSubmit={handleSubmit}>
+          <div className="two">
+            <label className="usernameLogo">
+              <i class="fa fa-user-circle"></i>
+            </label>
+            <input
+              placeholder="Username"
+              name="username"
+              value={loginInput.username}
+              onChange={handleChange}
+              className="loginInput"
+            ></input>
+          </div>
+
+          <div className="two">
+            <label className="passwordLogo">
+              <i class="fa fa-lock"></i>
+            </label>
+            <input
+              placeholder="Password"
+              name="password"
+              value={loginInput.password}
+              onChange={handleChange}
+              className="loginInput"
+            ></input>
+          </div>
+
+          <div className="twobuttons">
+            <NavLink to="/">
+              <button>Cancel</button>
+            </NavLink>
+            <button type="submit">Log In</button>
+          </div>
+
+          <div className="dontHaveAccount">
+            Don't have an account?{" "}
+            <NavLink to="/signup" className="signupInLogin">
+              Sign Up
+            </NavLink>
+          </div>
+
+          <div className={loggedInStatus ? "disappear" : "loginFail"}>
+            Logged in failed! Please try again!
+          </div>
+          <br />
+        </form>
+      </div>
     </div>
   );
 }

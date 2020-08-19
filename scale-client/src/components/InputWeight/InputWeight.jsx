@@ -15,7 +15,8 @@ function InputWeight(props) {
   const [userid, setUserid] = useState(null);
 
   useEffect(() => {
-    console.log(props.user.user.id);
+    console.log(props.user);
+    // console.log(props.user.user.id);
     setUserid(props.user.user.id);
   }, []);
 

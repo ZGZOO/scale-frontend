@@ -1,3 +1,67 @@
 .disappear {
   display: none;
 }
+
+.loginTitle {
+  font-size: 35px;
+}
+
+.loginFormContainer {
+  // border: 1px solid red;
+  height: 73vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.two {
+  height: 43%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  // border: 1px solid red;
+}
+
+.usernameLogo {
+  font-size: 38px;
+  color: #03989e;
+}
+
+.passwordLogo {
+  font-size: 50px;
+  color: #03989e;
+}
+
+.loginInput {
+  padding: 10px;
+}
+
+.twobuttons {
+  // border: 1px solid red;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.twobuttons button {
+  width: 83px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  background-color: #03989e;
+  border-radius: 25px;
+  padding: 13px;
+}
+
+.dontHaveAccount {
+  margin: 15px auto 0 auto;
+}
+
+.loginFail {
+  margin-top: 20px;
+  color: #ea484e;
+}

@@ -4,7 +4,7 @@ import apiUrl from "../../apiConfig";
 import { NavLink } from "react-router-dom";
 import "./ShowEntryList.scss";
 
-function ShowEntryList({ user }) {
+function ShowEntryList({ user, info }) {
   const [entries, setEntries] = useState([]);
 
   const getEntries = async (data) => {
@@ -26,13 +26,56 @@ function ShowEntryList({ user }) {
     }
   };
 
+  const getEntriesForSignUp = async (data) => {
+    try {
+      console.log("getEntries: ", data);
+      const response = await axios.get(`${apiUrl}/users/${data.user.id}`, {
+        headers: {
+          Authorization: `Bearer ${data.token}`,
+        },
+      });
+
+      console.log(
+        "getEntries - response.data.entries: here!!",
+        response.data.entries
+      );
+      setEntries(response.data.entries);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     if (user !== null) {
       //   const parsedUser = JSON.parse(user.user);
       //   console.log("useEffect, parse: ", JSON.parse(user.user));
       //   getEntries(parsedUser);
-      //   console.log(user.user);
-      getEntries(user.user);
+      console.log(user);
+      //sign up, need log in
+      if (user.status === undefined) {
+        axios({
+          url: `${apiUrl}/users/login`,
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: JSON.stringify(info),
+        })
+          .then((res) => {
+            console.log("handle submit here!! - ", res.data);
+            // props.handleLogin(res.data);
+            // if (res.data.status !== 401) {
+            //   props.history.push("/userpage");
+            // } else {
+            //   setLoggedInStatus(false);
+            //   console.log("Log in failed!");
+            // }
+            getEntriesForSignUp(res.data);
+          })
+          .catch(console.error);
+      } else {
+        getEntries(user.user);
+      }
     }
   }, []);
 
@@ -90,10 +133,11 @@ function ShowEntryList({ user }) {
 
   if (!user) {
     return <p>Loading...</p>;
-  } else if (entries !== null && entries.length === 0) {
+  } else if (user !== null && entries !== null && entries.length === 0) {
+    console.log("before error", user);
     return (
       <div className="addEntryDiv">
-        <h2>Hello, {user.user.username}!</h2>
+        <h2>Hello, {user.username}!</h2>
         <p>You don't have weights yet.</p>
         <div className="addAndSeeContainer">
           <NavLink to="/userpage/addWeight" className="addLink">

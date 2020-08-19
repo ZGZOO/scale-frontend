@@ -1,14 +1,25 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Home.scss";
 
 function Home() {
   return (
     <div className="Home">
-      <h1>Scale - Home</h1>
+      <h1 className="homeTitle">Scale</h1>
       <main className="homeMain">
-        <section>Record it! Track it! See it! Feel it!</section>
-        <section>Welcome back, my friend, by logging in!</section>
-        <section>Or reveal another way to see yourself, sign up now!</section>
+        <section>
+          <span className="line1">Track Your Weight</span>
+          <br />
+          <span className="line2">Every single day</span>
+          <br />
+          {/* Record it! <br />
+          Track it! <br />
+          See it! <br />
+          Feel it! */}
+        </section>
+        <NavLink to="/login" className="logInInHome">
+          Start Now!
+        </NavLink>
       </main>
     </div>
   );

@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
-.Home {
-  font-family: "Comfortaa", cursive;
+.homeTitle {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  color: #03989e;
 }
 
 section {
@@ -9,6 +11,33 @@ section {
 }
 
 .homeMain {
-  width: 70%;
+  width: 240px;
+  height: 65vh;
   margin: 0 auto;
+  text-align: left;
+  // border: 1px solid yellow;
+}
+
+.line1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.line2 {
+  font-size: 28px;
+  letter-spacing: 2.5px;
+  line-height: 80px;
+}
+
+.logInInHome {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  margin: 30px auto 0 auto;
+  width: 80%;
+  border: 1px solid red;
+  background-color: #ea484e;
+  border-radius: 30px;
 }
