@@ -32,6 +32,14 @@
   color: blue;
 }
 
+.deleteIcon {
+  cursor: pointer;
+}
+
+.deleteIcon :hover {
+  color: red;
+}
+
 .addAndSeeContainer {
   width: 80%;
   margin: 0 auto;

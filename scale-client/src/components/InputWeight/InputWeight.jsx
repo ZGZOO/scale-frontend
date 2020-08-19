@@ -65,35 +65,43 @@ function InputWeight(props) {
 
   return (
     <div className="inputWeight">
-      <h3>Input your weight Page</h3>
-      <form onSubmit={handleSubmit}>
-        <label>Your Weight Today:</label>
-        <br />
-        <input
-          placeholder="Input your weight:"
-          name="weight"
-          value={entryInput.weight}
-          onChange={handleChange}
-        ></input>
-        <select name="unit" value={entryInput.unit} onChange={handleChange}>
-          <option value="lb">lb</option>
-          <option value="kg">kg</option>
-        </select>
-        <br />
-        <br />
-        <label>Today's date:</label>
-        <br />
-        {/* <Calendar /> */}
-        <DayPickerInput onDayChange={handleDayChange} />
-        <br />
-        <br />
-        <button type="submit">Add Entry</button>
-        <NavLink to="/userpage">
-          <button>Cancel</button>
-        </NavLink>
-        <br />
-        <br />
-      </form>
+      <h3>Input your weight</h3>
+      <div className="inputFormContainer">
+        <form onSubmit={handleSubmit}>
+          <div className="two">
+            <label>
+              <i class="fa fa-user"></i>
+            </label>
+            <br />
+            <input
+              placeholder="Input your weight:"
+              name="weight"
+              value={entryInput.weight}
+              onChange={handleChange}
+            ></input>
+            <select name="unit" value={entryInput.unit} onChange={handleChange}>
+              <option value="lb">lb</option>
+              <option value="kg">kg</option>
+            </select>
+          </div>
+
+          <div className="two">
+            <label>
+              <i class="fa fa-calendar"></i>
+            </label>
+            <br />
+            {/* <Calendar /> */}
+            <DayPickerInput onDayChange={handleDayChange} />
+          </div>
+
+          <div className="twoInputButtons">
+            <NavLink to="/userpage">
+              <button>Cancel</button>
+            </NavLink>
+            <button type="submit">Add Entry</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

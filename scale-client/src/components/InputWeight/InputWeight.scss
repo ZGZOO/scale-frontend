@@ -1,0 +1,24 @@
+.inputFormContainer {
+  height: 83vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.twoInputButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.twoInputButtons button {
+  width: 90px;
+  border: none;
+  font-weight: 600;
+  color: white;
+  background-color: #03989e;
+  border-radius: 25px;
+  padding: 13px;
+}

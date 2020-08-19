@@ -101,8 +101,9 @@ function ShowEntryList({ user, info }) {
             {entry.unit}
           </p>
           <p>
-            Date: {new Date(entry.date).getFullYear()}/
-            {new Date(entry.date).getMonth()}/{new Date(entry.date).getDate()}
+            Date: {new Date(entry.date).getMonth()}/
+            {new Date(entry.date).getDate()}/
+            {new Date(entry.date).getFullYear()}
           </p>
         </div>
 
@@ -119,13 +120,15 @@ function ShowEntryList({ user, info }) {
             <i className="fa fa-pencil-square-o" id="editIcon"></i>
           </NavLink>
 
-          <i
-            className="fa fa-trash-o"
-            id="deleteIcon"
-            onClick={() => {
-              handleDelete(user.user, entry.id);
-            }}
-          ></i>
+          <a className="deleteIcon">
+            <i
+              className="fa fa-trash-o"
+              id="deleteIcon"
+              onClick={() => {
+                handleDelete(user.user, entry.id);
+              }}
+            ></i>
+          </a>
         </div>
       </div>
     );
