@@ -9,6 +9,7 @@ import UserPage from "./components/UserPage/UserPage";
 import Logout from "./components/Logout/Logout";
 import InputWeight from "./components/InputWeight/InputWeight";
 import UpdateWeight from "./components/UpdateWeight/UpdateWeight";
+import WeightChart from "./components/Chart/Chart";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -44,6 +45,10 @@ const App = () => {
           <Route
             path="/userpage/editWeight"
             render={(props) => <UpdateWeight {...props} user={user} />}
+          />
+          <Route
+            path="/userpage/seeChart"
+            render={(props) => <WeightChart {...props} user={user} />}
           />
           <Route
             path="/login"

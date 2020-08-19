@@ -71,6 +71,7 @@ function ShowEntryList({ user }) {
                 entryId: entry.id,
               },
             }}
+            className="editLink"
           >
             <i className="fa fa-pencil-square-o" id="editIcon"></i>
           </NavLink>
@@ -94,18 +95,28 @@ function ShowEntryList({ user }) {
       <div className="addEntryDiv">
         <h2>Hello, {user.user.username}!</h2>
         <p>You don't have weights yet.</p>
-        <NavLink to="/userpage/addWeight">
-          Add entry<i className="fa fa-calendar-plus-o"></i>
-        </NavLink>
+        <div className="addAndSeeContainer">
+          <NavLink to="/userpage/addWeight" className="addLink">
+            Add Entry<i className="fa fa-calendar-plus-o"></i>
+          </NavLink>
+          <NavLink to="/userpage/seeChart" className="seeChart">
+            See Chart<i class="fa fa-line-chart"></i>
+          </NavLink>
+        </div>
       </div>
     );
   } else {
     return (
       <div>
         <h2>Welcome back, {user.user.username}!</h2>
-        <NavLink to="/userpage/addWeight">
-          Add entry<i className="fa fa-calendar-plus-o"></i>
-        </NavLink>
+        <div className="addAndSeeContainer">
+          <NavLink to="/userpage/addWeight" className="addLink">
+            Add Entry<i className="fa fa-calendar-plus-o"></i>
+          </NavLink>
+          <NavLink to="/userpage/seeChart" className="seeChart">
+            See Chart<i class="fa fa-line-chart"></i>
+          </NavLink>
+        </div>
         {entriesArr}
       </div>
     );

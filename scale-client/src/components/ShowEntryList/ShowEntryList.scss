@@ -20,8 +20,37 @@
   justify-content: space-around;
 }
 
-.addEntryDiv a {
+.editLink {
+  color: black;
+}
+
+.editLink :active {
+  color: blue;
+}
+
+.editLink :hover {
+  color: blue;
+}
+
+.addAndSeeContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.addLink,
+.seeChart {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   cursor: pointer;
-  color: red;
+  color: rgb(12, 116, 180);
+  font-size: 20px;
+}
+
+.addLink i,
+.seeChart i {
+  font-size: 40px;
 }
