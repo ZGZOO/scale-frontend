@@ -26,7 +26,7 @@ a {
 }
 
 .sideNav {
-  background-color: aqua;
+  background-color: #e7343a;
   // border: 1px solid red;
   transition: left 0.5s ease;
   box-sizing: border-box;
@@ -72,4 +72,38 @@ a {
 
 .bar2 {
   transform: rotate(-45deg);
+}
+
+.navlink {
+  display: inline-block;
+  width: 50%;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  // border: 1px solid yellow;
+}
+
+.navlink:hover {
+  color: #d8e1ff;
+}
+
+.loggedInSideNavContainer {
+  display: flex;
+  margin-top: 20px;
+  height: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loggedOutSideNavContainer {
+  display: flex;
+  margin-top: 20px;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 120px;
 }

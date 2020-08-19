@@ -26,27 +26,51 @@ function Nav({ loggedIn }) {
         </div>
       </nav>
       <section className={"sideNav " + sideNavStatus}>
-        <NavLink to="/home" onClick={handleOpenBtn}>
-          <img
-            src="https://res.cloudinary.com/headincloud/image/upload/v1597210518/scale_logo.png"
-            alt="Scale Logo"
-            className="logo"
-          />
-        </NavLink>
-        {loggedIn ? (
-          <>
-            <NavLink to="/logout" onClick={handleOpenBtn}>Log Out</NavLink>
-            <NavLink to="/userpage" onClick={handleOpenBtn}>My page</NavLink>
-            <NavLink to="/userpage/addWeight" onClick={handleOpenBtn}>Add entry</NavLink>
-            <NavLink to="/userpage/editProfile" onClick={handleOpenBtn}>Edit profile</NavLink>
-          </>
-        ) : (
-          <>
-            <NavLink to="/login" onClick={handleOpenBtn}>Log In</NavLink>
-            <NavLink to="/signup" onClick={handleOpenBtn}>Sign Up</NavLink>
-          </>
-        )}
-        {loggedIn ? <h3>log-in</h3> : <h3>log-out</h3>}
+        <div
+          className={
+            loggedIn ? "loggedInSideNavContainer" : "loggedOutSideNavContainer"
+          }
+        >
+          <NavLink to="/home" onClick={handleOpenBtn} className="navlink">
+            <img
+              src="https://res.cloudinary.com/headincloud/image/upload/v1597210518/scale_logo.png"
+              alt="Scale Logo"
+              className="logo"
+            />
+          </NavLink>
+          {loggedIn ? (
+            <>
+              <NavLink to="/logout" onClick={handleOpenBtn} className="navlink">
+                Log Out
+              </NavLink>
+              <NavLink
+                to="/userpage"
+                onClick={handleOpenBtn}
+                className="navlink"
+              >
+                My Page
+              </NavLink>
+              <NavLink
+                to="/userpage/addWeight"
+                onClick={handleOpenBtn}
+                className="navlink"
+              >
+                Add Entry
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink to="/login" onClick={handleOpenBtn} className="navlink">
+                Log In
+              </NavLink>
+              <NavLink to="/signup" onClick={handleOpenBtn} className="navlink">
+                Sign Up
+              </NavLink>
+            </>
+          )}
+        </div>
+
+        {/* {loggedIn ? <h3>log-in</h3> : <h3>log-out</h3>} */}
 
         <div className={"closebtn"} onClick={handleCloseBtn}>
           <div className={"closebars"}>

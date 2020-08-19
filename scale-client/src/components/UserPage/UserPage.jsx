@@ -6,7 +6,6 @@ function UserPage({ user }) {
   console.log("UserPage - ", user);
   return (
     <>
-      <h3>In the User Page</h3>
       <ShowEntryList user={user} />
     </>
   );
